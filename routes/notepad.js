@@ -6,6 +6,9 @@ router.get('/', function(req, res) {
   res.sendfile("public/html/notepad.html")
 });
 
+router.get('/angular_example', function(req, res) {
+  res.sendfile("public/html/notepad_angular_example.html")
+});
 
 router.get('/notes_json', function(req, res) {
   var db = req.db;

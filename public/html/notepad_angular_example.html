@@ -2,12 +2,11 @@
 <html ng-app="myApp">
 
 <head>  
-  <title>Angular Notepad - with Mongo and Node</title>
-  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <title>Angular Notepad - no need for node/mongodb</title>
+  <link rel='stylesheet' href='../stylesheets/style.css' />
 </head>
 
 <body ng-controller="NoteController">
-  <a href="/angular_example">Follow link if not runing mongodb.</a>
   <h2>My Notes</h2>
   <p>:{{ status_message }}</p>
   <a href="#" ng-click="show_createNote()"> Create Note</a>
@@ -40,7 +39,7 @@
 <script src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
 <script src='../javascripts/lib/angular/angular.js'></script>
 <script src='../javascripts/lib/angular/angular-route.js'></script>
-<script src='../javascripts/notepad.js') ></script>
+<script src='../javascripts/notepad_angular_example.js') ></script>
 </html>
   
 
