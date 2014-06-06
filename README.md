@@ -1,10 +1,10 @@
-monggodb_express_angular_node
+Angular demonstration buiilt on node and mongodb
 =============================
 
-MEAN example - some CRUD operations
+If you haven't got node or mongo installed or working you can see the
+pure angular example by opening public/html/notepad_angular_example.html
 
-
-Simple example of operations using node.
+Otherwsie follow these steps:
 
 clone repositry
 
@@ -15,4 +15,8 @@ ensure mongodb is running on port 27017
 goto http://localhost:3000
 
 
-Enjoy
+Add and view notes.  
+
+
+****
+Have rendered html pages rather than jade template for clarity. 
