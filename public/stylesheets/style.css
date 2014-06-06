@@ -6,3 +6,27 @@ body {
 a {
   color: #00B7FF;
 }
+
+ #container { 
+    vertical-align: top;
+  }
+    
+  #all_notes { 
+    margin-top: 0;
+    width: 30%;
+    border: 1px solid black;
+    background-color: #fee;
+    display: inline-block;
+  }
+
+  #all_notes h2 { 
+  font-size: 120%;
+  }
+
+  #main_pane { 
+    vertical-align: top;
+    width: 60%;
+    border: 1px solid black;
+    background-color: #eef;
+    display: inline-block;
+  }

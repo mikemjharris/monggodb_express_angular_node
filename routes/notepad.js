@@ -1,0 +1,31 @@
+var express = require('express');
+var router = express.Router();
+
+/* GET home page. */
+router.get('/', function(req, res) {
+  res.sendfile("public/html/notepad.html")
+});
+
+
+router.get('/notes_json', function(req, res) {
+  var db = req.db;
+  db.collection('notes').find().toArray(function (err, notes) {
+        res.json(notes);
+  });
+});
+
+router.post('/notes_json', function(req, res) {
+  var db = req.db;
+  var note = req.body;
+  console.log("hi");
+  db.collection('notes').insert(note, function(err, result) {
+       res.send(
+            (err === null) ? { msg: "" } : { msg: err }
+        );
+  });
+  
+
+});
+
+
+module.exports = router;

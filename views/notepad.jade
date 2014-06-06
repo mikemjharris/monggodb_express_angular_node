@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  p Angular notepad
+
+  div(ng-controller="NoteController")
+    p(ng-show="status_message") {{ status_message }}
+    a(href="#" ng-click="show_createNote()") Create Note
+    ul
+      li(ng-repeat="note in notes")
+        a(href="#" ng-click='showNote(note)'){{ note.title }} : {{note.body}}
+
+    div   
+      form(ng-hide="shownote" ng-submit="createNote()") Create Note
+        input(placeholder="title" ng-model="new_note.title")
+        input(placeholder="body" ng-model="new_note.body")
+        input(type="submit")  
+      div(ng-show="shownote") Show Note
+        p Title: {{shownote.title}}
+        p Body: {{shownote.body}}
+
+
+
+
+
+  script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+  script(src='../javascripts/lib/angular/angular.js')
+  script(src='../javascripts/lib/angular/angular-route.js')
+  script(src='../javascripts/notepad.js')  
+  
+  
+

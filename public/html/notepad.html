@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>  
+  <title>Angular Notepad</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body ng-controller="NoteController">
+  <h2>My Notes</h2>
+  <p>:{{ status_message }}</p>
+  <a href="#" ng-click="show_createNote()"> Create Note</a>
+
+  <div id="container">
+    <ul id="all_notes">
+      <li ng-repeat="note in notes">
+        <a href="#" ng-click='showNote(note)'>{{ note.title }}</a>
+      </li>
+    </ul>
+
+    <div id="main_pane">   
+      <form ng-hide="shownote" ng-submit="createNote()">
+        <p>Create Note</p>
+        <input placeholder="title" ng-model="new_note.title" /><br />
+        <input placeholder="body" ng-model="new_note.body" /><br />
+        <input type="submit" />
+      </form>
+
+      <div ng-show="shownote">
+        <p> Title: {{shownote.title}}</p>
+        <p> Body: {{shownote.body}}</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
+<script src='../javascripts/lib/angular/angular.js'></script>
+<script src='../javascripts/lib/angular/angular-route.js'></script>
+<script src='../javascripts/notepad.js') ></script>
+</html>
+  
+
