@@ -1,4 +1,4 @@
-Angular demonstration buiilt on node and mongodb
+Angular demonstration built on node and mongodb
 =============================
 
 If you haven't got node or mongo installed or working you can see the
