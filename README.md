@@ -8,9 +8,12 @@ Otherwsie follow these steps:
 
 clone repositry
 
+```
 npm install
+```
 
 ensure mongodb is running on port 27017
+(mongod --dbpath path)
 
 goto http://localhost:3000
 
