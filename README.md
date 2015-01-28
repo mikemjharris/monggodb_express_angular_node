@@ -10,6 +10,8 @@ clone repositry
 
 ```
 npm install
+
+npm start
 ```
 
 ensure mongodb is running on port 27017
