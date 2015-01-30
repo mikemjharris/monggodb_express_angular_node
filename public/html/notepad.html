@@ -15,7 +15,7 @@
   <div id="container">
     <ul id="all_notes">
       <li ng-repeat="note in notes">
-        <a href="#" ng-click='showNote(note)'>{{ note.title }}</a>
+        <a href="#" ng-click='showNote(note)'>{{ note.title || 'blank title' }}</a>
       </li>
     </ul>
 
@@ -30,6 +30,7 @@
       <div ng-show="shownote">
         <p> Title: {{shownote.title}}</p>
         <p> Body: {{shownote.body}}</p>
+        <button ng-click="deleteNote(shownote)">delete</button>
       </div>
     </div>
   </div>
