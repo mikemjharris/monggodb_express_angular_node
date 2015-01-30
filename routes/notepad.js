@@ -22,9 +22,10 @@ router.post('/notes_json', function(req, res) {
   var db = req.db;
   var note = req.body;
   console.log("hi");
+
   db.collection('notes').insert(note, function(err, result) {
     res.send(
-      (err === null) ? { msg: "" } : { msg: err }
+      (err === null) ? { msg: "", _id: result[0]._id } : { msg: err }
       );
   });
 });

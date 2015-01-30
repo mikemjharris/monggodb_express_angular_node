@@ -21,6 +21,7 @@ app.controller('NoteController', function($scope, $http) {
   }
   $scope.createNote = function() {
     $http.post("notes_json/", $scope.new_note).success(function(data) {
+      $scope.new_note._id = data._id
       $scope.notes.push($scope.new_note);
       $scope.new_note = "";
       $scope.status_message = "Note Created";
