@@ -29,9 +29,9 @@ router.post('/notes_json', function(req, res) {
   });
 });
 
-router.post('/notes_delete', function(req, res) {
+router.post('/notes_delete/:_id', function(req, res) {
   var db = req.db;
-  var id = req.body.id;
+  var id = req.params._id;
   console.log("deleting: ", id);
   db.collection('notes').remove({_id: ObjectID(id)}, function(err, result) {
     res.send(

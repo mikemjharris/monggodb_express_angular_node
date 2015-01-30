@@ -27,7 +27,7 @@ app.controller('NoteController', function($scope, $http) {
     });
   }
   $scope.deleteNote = function(note) {
-    $http.post("notes_delete/", { id: note._id }).success(function(data) {
+    $http.post("notes_delete/" + note._id).success(function(data) {
       var index = $scope.notes.indexOf(note);
 
       $scope.notes.splice(index, 1);
